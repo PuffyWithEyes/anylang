@@ -171,7 +171,5 @@ JSON keys are converted to SCREAMING_SNAKE_CASE for Rust constants:
 ## Roadmap
 
 - [x] JSON support
-
 - [ ] TOML support
-
 - [ ] YAML support
