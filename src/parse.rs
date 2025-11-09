@@ -290,14 +290,18 @@ pub(crate) fn parse_from_file(file: path::PathBuf) -> syn::Result<File> {
     if let Some(extension) = file.extension() {
         #[cfg(feature = "json")]
         if extension == "json" {
-            let data = fs::File::open(file).map_err(|e| syn::Error::new_spanned(
+            let data = fs::File::open(file).map_err(|e| {
+                syn::Error::new_spanned(
                     syn::LitStr::new(&e.to_string(), proc_macro2::Span::call_site()),
                     error!(format!("Cannot read file {file_name} cause {e}")),
-                ))?;
-            let value = serde_json::from_reader(data).map_err(|e| syn::Error::new_spanned(
+                )
+            })?;
+            let value = serde_json::from_reader(data).map_err(|e| {
+                syn::Error::new_spanned(
                     syn::LitStr::new(&e.to_string(), proc_macro2::Span::call_site()),
                     error!(format!("Cannot deserialize {file_name} cause {e}")),
-                ))?;
+                )
+            })?;
 
             let mut root_namespace = JsonNamespace::default();
             parse_json(&value, &mut root_namespace, &file_name.to_uppercase())?;
@@ -316,7 +320,10 @@ pub(crate) fn parse_from_file(file: path::PathBuf) -> syn::Result<File> {
         const ERR_MSG: &str = "No one feature was choosed!";
 
         #[allow(unused)]
-        Err(syn::Error::new_spanned(syn::LitStr::new(ERR_MSG, proc_macro2::Span::call_site()), error!(ERR_MSG)))
+        Err(syn::Error::new_spanned(
+            syn::LitStr::new(ERR_MSG, proc_macro2::Span::call_site()),
+            error!(ERR_MSG),
+        ))
     } else {
         Err(syn::Error::new_spanned(
             syn::LitStr::new(&file_name, proc_macro2::Span::call_site()),
