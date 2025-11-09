@@ -1,0 +1,18 @@
+[package]
+name = "anylang"
+version = "0.0.0"
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "*", features = ["full"] }
+quote = "*"
+serde_json = { version = "*", optional = true }
+proc-macro2 = "*"
+
+
+[features]
+default = ["json"]
+json = ["serde_json"]

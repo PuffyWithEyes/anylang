@@ -1,0 +1,18 @@
+[
+    {
+        "ping": "pong"
+    },
+    {
+        "dummy": {
+            "some": ["none", "or", 0]
+        },
+        "foo": "buzz",
+        "rust": {
+            "rust": "rust",
+            "is": null,
+            "good": {
+                "true": [1, true]
+            }
+        }
+    }
+]
