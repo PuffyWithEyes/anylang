@@ -11,10 +11,10 @@ description = "Crate for generating constants with values at compile time "
 proc-macro = true
 
 [dependencies]
-syn = { version = "*", features = ["full"] }
-quote = "*"
-serde_json = { version = "*", optional = true }
-proc-macro2 = "*"
+syn = { version = "1.0", features = ["full"] }
+quote = "1.0"
+serde_json = { version = "1.0", optional = true }
+proc-macro2 = "1.0"
 
 
 [features]

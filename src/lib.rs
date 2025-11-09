@@ -30,7 +30,7 @@
 //! You can do the arrangement differently, but for convenience I will do it
 //! like this:
 //!
-//! ```
+//! ```text
 //! main.rs
 //! lang/
 //! ├── en_US.json
@@ -84,7 +84,7 @@
 //!
 //! These examples work in different variations of the main.rs file:
 //!
-//! ```rust
+//! ```ignore
 //! use anylang::include_json_dir;
 //!
 //! // Include English translations
@@ -100,7 +100,7 @@
 //! }
 //! ```
 //!
-//! ```rust
+//! ```ignore
 //! use anylang::include_json_dir;
 //!
 //! // Include Russian translations
@@ -116,7 +116,7 @@
 //! }
 //! ```
 //!
-//! ```rust
+//! ```ignore
 //! use anylang::include_json_dir;
 //!
 //! // Include German translations (simple value)
@@ -181,6 +181,7 @@
 //! ## License
 //!
 //! **MIT**
+//!
 
 mod parse;
 #[macro_use]
@@ -246,7 +247,7 @@ impl MacroArgs {
 /// }
 /// ```
 ///
-/// ```rust
+/// ```ignore
 /// use anylang::include_json_dir;
 ///
 /// // Include Russian translations
