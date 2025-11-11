@@ -1,11 +1,28 @@
 [package]
 name = "anylang"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2024"
 authors = ["puffy_with_eyes"]
 repository = "https://github.com/PuffyWithEyes/anylang"
 license = "MIT"
-description = "Crate for generating constants with values at compile time "
+keywords = [
+    "localization",
+    "i18n",
+    "internationalization",
+    "l10n",
+    "compile-time",
+    "const",
+    "no-std",
+    "zero-cost",
+    "gettext",
+    "message-format",
+    "no-alloc",
+    "no-heap",
+    "embedded",
+    "macros",
+    "proc-macro"
+]
+description = "Crate for generating constants with values at compile time"
 
 [package.metadata]
 keywords = [
