@@ -1,11 +1,30 @@
 [package]
 name = "anylang"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2024"
 authors = ["puffy_with_eyes"]
 repository = "https://github.com/PuffyWithEyes/anylang"
 license = "MIT"
 description = "Crate for generating constants with values at compile time "
+
+[package.metadata]
+keywords = [
+    "localization",
+    "i18n",
+    "internationalization",
+    "l10n",
+    "compile-time",
+    "const",
+    "no-std",
+    "zero-cost",
+    "gettext",
+    "message-format",
+    "no-alloc",
+    "no-heap",
+    "embedded",
+    "macros",
+    "proc-macro"
+]
 
 [lib]
 proc-macro = true
@@ -15,7 +34,6 @@ syn = { version = "1.0", features = ["full"] }
 quote = "1.0"
 serde_json = { version = "1.0", optional = true }
 proc-macro2 = "1.0"
-
 
 [features]
 default = ["json"]
