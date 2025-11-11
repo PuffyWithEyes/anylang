@@ -76,6 +76,10 @@
 //! }
 //! ```
 //!
+//! ## Support for non-string types
+//!
+//! There is also support for all standard JSON types. Examples below
+//!
 //! **de_DE.json:**
 //!
 //! ```json
@@ -182,7 +186,7 @@
 //!
 //! **MIT**
 
-mod parse;
+mod parser;
 #[macro_use]
 mod r#macro;
 
@@ -288,7 +292,7 @@ pub fn include_json_dir(input: TokenStream) -> TokenStream {
         if let Some(file_name) = path.file_prefix()
             && file_name == lang.as_str()
         {
-            match parse::parse_from_file(path) {
+            match parser::parse_from_file(path) {
                 Ok(file) => needed_file = Some(file),
                 Err(e) => return e.to_compile_error().into(),
             }

@@ -72,6 +72,10 @@ lang/
 }
 ```
 
+## Support for non-string types
+
+There is also support for all standard JSON types. Examples below
+
 **de_DE.json:**
 
 ```json
