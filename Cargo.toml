@@ -7,19 +7,9 @@ repository = "https://github.com/PuffyWithEyes/anylang"
 license = "MIT"
 keywords = [
     "localization",
-    "i18n",
     "internationalization",
-    "l10n",
     "compile-time",
     "const",
-    "no-std",
-    "zero-cost",
-    "gettext",
-    "message-format",
-    "no-alloc",
-    "no-heap",
-    "embedded",
-    "macros",
     "proc-macro"
 ]
 description = "Crate for generating constants with values at compile time"
